@@ -1,0 +1,20 @@
+<h4>Example Of Custom ContextMenu</h4>
+
+<ul>
+  <li>app-custom-context-menu component has five inputs: top, left, show, items, and itemClicked.</li>
+  <li>top and left are strings that represent the position of the context menu,</li>
+  <li>show is a boolean that determines whether the menu should be shown,</li>
+  <li>items is an array of menu items, and itemClicked is an EventEmitter that emits an event when a menu item is clicked.</li>
+  <li>The handleClick() method is called when a menu item is clicked. It emits an event with the selected item.</li>
+  <li>The contextmenu event is triggered when the user right-clicks on an element.</li>
+  <li>In this case, we're binding the event to the showContextMenu() method.</li>
+</ul>
+
+<h4>Example:</h4>
+<div (contextmenu)="showContextMenu()">
+  Right-click me to show context menu!
+</div>
+
+<app-custom-context-menu [top]="'100'" [left]="'100'" [show]="show" [items]="items"
+                         (itemClicked)="handleItemClick($event)">
+</app-custom-context-menu>

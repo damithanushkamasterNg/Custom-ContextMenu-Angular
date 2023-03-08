@@ -1,0 +1,5 @@
+<div class="context-menu" [ngStyle]="{top: top, left: left}" *ngIf="show">
+  <ul>
+    <li *ngFor="let item of items" (click)="handleClick(item)">{{ item.label }}</li>
+  </ul>
+</div>
